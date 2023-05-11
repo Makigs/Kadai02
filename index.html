@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G'sアカデミーの森</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+JP"
+      rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section id="box1" class="box" data-section-name="Area1"><!--data-section-nameはページネーションを表示させた際、現在地に現れるテキスト-->
+
+    <div class="mainpic"></div>
+
+    <header class="header">
+      <ul class="navi">
+        <li class="navititle"><a href="JQuery_syntax.html">よくある構文を調べる</a></li>
+        <li class="navititle"><a href="example_error.html">よくあるエラーをみる</a></li>
+        <li class="navititle"><a href="linux_command.html">Linuxコマンド</a></li>
+        <li class="navititle"><a href="#Service">Our Service</a></li>
+        <li class="navititle"><a href="#AboutUs">About Us</a></li>
+      </ul>
+    </header>
+
+    <div class="openbtn btn_remove"><span></span><span>Menu</span><span></span></div>
+
+    <div class="menuwrap menu_remove">
+      <div class="menubar">
+        <ul>
+          <li class="menu"><a href="#">TOP</a></li>
+          <li class="menu"><a href="JQuery_syntax.html">よくある構文を調べる</a></li>
+          <li class="menu"><a href="example_error.html">よくあるエラーをみる</a></li>
+          <li class="menu"><a href="linux_command.html">Linuxコマンド</a></li>
+          <li class="menu"><a href="#Service">Our Service</a></li>
+          <li class="menu"><a href="#AboutUs">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="main_message">Before destroying your computer...</div>
+    <div class="main_message_2">
+      あなた自身を責める前に、そして物にあたる前に、<br />
+      さっそく始めましょう
+    </div>
+
+    <div class="breath-start">
+      <div class="breath-start-button btn_anime bg_anime" id="btn-hover">
+        <span>start</span>
+      </div>
+    </div>
+
+    <div class="start-modal-wrapper" id="start-modal">
+      <div class="start-button-modal">
+        <div class="close-modal">
+          <i class="fa fa-times">×</i>
+        </div>
+        <div id="start-form">
+          <h2>まずは落ち着きましょう</h2>
+          <img class="deep_breath" src="img/deep_breath.jpg" alt="" />
+          <h2>3回深呼吸をしたら・・・</h2>
+          <div class="start-btn btn_anime bg_anime" id="btn-hover">
+            <a href="JQuery_syntax.html"><span>START</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+      
+
+    
+    <section id="box2" class="box" data-section-name="Area2">
+      <div class="top-margin"><a name="Service"></a></div>
+      <div class="subtitle"><p>Our Service</p></div>
+
+      <div class="service_wrap_box2">
+
+          <div class="service_content">
+            <div class="service_img_content" id="service_img1">
+            <img class="service_img" src="img/Service_1.png" alt=""></div>
+            <div class="service_content_text">
+              <p>JQueryを記載する際、よく利用する構文を記載しています。
+                構文のチェックや、文法間違いがないかを見直す際に利用しましょう。
+              </p>
+            </div>
+          </div>
+          <div class="service_img_content">
+          <div class="service_content" id="service_img2">
+            <img class="service_img" src="img/Service_2.png" alt=""></div>
+            <div class="service_content_text">
+              <p>よくあるエラーの例を記載しています。検索機能もあるので、エラーにぶつかったときに利用してみましょう。
+              </p>
+            </div>
+          </div>
+
+      </div>
+    </section>
+      
+
+    <section id="box3" class="box" data-section-name="Area3">
+    <div class="top-margin"></div>
+    <div class="subtitle"><a name="AboutUs"></a><p>About Us</p></a></div>
+
+    <div class="service_wrap_box3">
+      <div class="table-access">
+        <table bordercolor="#FFFFFF">
+          <tr>
+            <td width="150" height="50">学校名</td>
+            <td>チーズアカデミーTOKYO</td>
+          </tr>
+          <tr>
+            <td height="50">事務所所在地</td>
+            <td>〒107-0061　東京都港区北青山3-5-6 青朋ビル2F</td>
+          </tr>
+          <tr>
+            <td height="50">TEL</td>
+            <td>03-XXXX-XXXX</td>
+          </tr>
+          <tr>
+            <td height="50">FAX</td>
+            <td>03-XXXX-XXXX</td>
+          </tr>
+          <tr>
+            <td height="50">MAIL</td>
+            <td>dummy@cheeseacademy.tokyo</td>
+          </tr>
+        </table>
+      </div>
+
+
+      <div class="footer_wrap">
+        <div class="footer">
+          <footer id="footer">
+            <small>本サイトは、G's ACADEMY（デジタルハリウッド株式会社運営）の指導により、所属生徒がプログラミング学習を目的として作成した非商用サイトです。<br>
+            サイト内の画像は、Pixabay（https://pixabay.com/ja/）よりダウンロードし利用しています。 </small>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    </section>
+      
+
+      
+      <a href="#" id="page-top"><img src="img/TOP.png" alt=""></a>
+      
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
+
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

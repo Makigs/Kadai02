@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G'sアカ森_よくあるエラー</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style-error.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="splash">
+        <div class="splash-logo">Loading...</div>
+      </div>
+      <!---画面遷移用-->
+			<div class="splashbg"></div>
+
+			<div id="container">
+        <header class="header">
+          <ul class="navi">
+            <li class="navititle"><a href="index.html">TOP</a></li>
+            <li class="navititle"><a href="JQuery_syntax.html">よくある構文をみる</a></li>
+			<li class="navititle"><a href="linux_command.html">Linuxコマンド</a></li>
+            <li class="navititle"><a href="index.html#Area2">Our Service</a></li>
+            <li class="navititle"><a href="index.html#Area3">About Us</a></li>
+          </ul>
+        </header>
+
+
+				<div class="subtitle"><p>よくあるエラー</p></div>
+
+				<div class="error-wrapper">
+					<div class="error_search">
+						<form>
+							<input type="search" id="search" placeholder="キーワードを入力">
+							<input type="submit" value="検索">
+						</form>
+					</div>
+	
+
+					<ul class="error-table">
+						<li class="error-example">
+							<p class="error-question">JQueryを記載したのに、なぜか動かない。エラーもでていない。</p>
+							<span>+</span>
+							<p class="error-answer">以下のようなケースが多いです。もう一度JQuery構文を見直しましょう<br>
+								-.（クラス）、#（ID）は記載した？<br>
+								-IDなのに.、クラスなのに#になっていない？</p>
+						</li>
+						<li class="error-example">
+							<p class="error-question">caught ReferenceError: XXX is not defined</p>
+							<span>+</span>
+							<p class="error-answer">定義されていない変数を呼び出しています。XXXで記載した変数・クラス・IDについて、以下を確認してください。<br>
+							名前のスペルミスがないか、”.””＃”は記載しているか、（JQueryセレクタの場合）カンマを入れているか</p>
+						</li>
+						<li class="error-example">
+							<p class="error-question">caught SyntaxError: Unexpected string </p>
+							<span>+</span>
+							<p class="error-answer">コードの構文に誤りがあることを示します。JQueryの記載について、以下を確認してください。<br>
+							括弧の閉じの欠落が内科、中括弧や他の文字の不適切な利用がないか。「よくある構文をみる」ページで文法を確認しましょう</p>
+						</li>
+					</ul>
+				</div>
+
+
+			</div><!-- コンテナーの閉じタグ -->
+
+				<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+				<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
+				<script src="js/main.js"></script>
+
+</body>
+</html>

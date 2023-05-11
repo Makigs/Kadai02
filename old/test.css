@@ -1,0 +1,45 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* max-width: 1500px;
+    min-width: 240px; 
+    /* min-height: 400px; */
+    /* max-height: 15000px;
+    font-family: "Noto Sans JP";
+    height: 15000px;  */
+    height: 100%;    
+}
+
+/* レスポンシブ */
+/* @media (max-width: 600px) {
+    .header__nav {
+        display: none;
+    }
+} */
+
+
+/* ここから例文 */
+.example_wrap {
+    margin: 0px 70px ;
+    gap: 50px;
+    /* position: fixed; */
+    top: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* .remove {
+    display: none;
+} */
+
+.example {
+    padding: 20px;
+}
+
+.example_pic {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}

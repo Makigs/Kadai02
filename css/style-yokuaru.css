@@ -1,0 +1,363 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* max-width: 1500px;  */
+    min-width: 240px; /* 最小幅 */
+    min-height: 400px; /* 最小幅 */
+    max-height: 15000px; /* 最大幅 */
+    font-family: "Noto Sans JP";
+    height: auto; /* 最大幅 */
+	background:#333;/*遷移アニメーションと同じ色を指定*/	
+	/* margin: auto; */
+}
+
+/* レスポンシブ */
+/* @media (max-width: 600px) {
+    .header__nav {
+        display: none;
+    }
+} */
+
+
+/* ローディング画面のためのCSS */
+.splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	z-index: 9999999;
+	text-align:center;
+	color:#fff;
+}
+
+.splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: "Noto Sans JP";
+}
+
+
+/*画面遷移のためのCSS*/
+
+/*画面遷移アニメーション*/
+
+/*画面を開いた後の背景色を指定*/
+body.appear{
+    background:#fff;
+}
+
+.splashbg{
+	position: fixed;
+	top: 0;
+	right:0;
+	bottom:0;
+	left: 0;
+	border-width: 0px;/*開始はボーダーの太さは0*/
+	border-style:solid;
+    border-color: #666;/*拡大する四角の色*/
+	animation-duration:.5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes backBoxAnime{
+	99.9% {/*アニメーション終了ぎりぎりまで*/
+        z-index: 2;/*最前面に*/
+		border-width: 0px;/*開始はボーダーの太さは0*/
+	}
+    100%{
+		z-index: -1; /*最背面に*/
+        border-width: 0px;/*終了はボーダーの太さは0*/
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+    position: relative;
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay:0.2s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+.splash.is-active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.splashbg.is-active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.splash-logo.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ヘッダー */
+.header {
+    position: absolute;
+    top: 0; /* 上部から配置の基準位置を決める */
+    left: 0; /* 左から配置の基準位置を決める */
+    width: 100%; /* ヘッダーの横幅を指定する */
+    height: 35px; /* ヘッダーの高さを指定する */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+
+.navi{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navititle{
+    padding: 50px 25px;
+    font-size: 15px;
+}
+
+.navititle a{
+    color: gray;
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Noto Sans JP";
+}
+
+/* ここから選択画面 */
+
+.chk {
+	accent-color: gray;
+	margin: 5px;
+}
+
+.chk:hover {
+	text-decoration: underline;
+}
+
+.example-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.example-button-modal {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fafafa;
+    padding: 30px 0 30px;
+    border-radius: 10px;
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+
+.example_choice{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-2 {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.fa-times {
+    position: absolute;
+    right: 5%;
+    color:gray;
+    cursor: pointer;
+}
+
+.example_choice ul li{
+    width: 400px;
+}
+
+
+label, input[type='checkbox'] {
+    cursor: pointer;
+}
+
+.example-btn {
+    display: inline-block;
+    padding: 14px 140px;
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin: 10px auto;
+}
+
+.btn-checked {
+    display: inline-block;
+    padding: 14px 140px;
+    background-color: gray;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.btn-checked:hover{
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+}
+
+.active{
+    display: block;
+}
+
+/* ここから例文 */
+
+.example_explanation {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+    /*線の基点とするためrelativeを指定*/
+	position: relative;
+	color: #01323f;
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    left: 20%;
+	right:20%;
+    bottom: -7px;
+    height: 2px;
+    background-color: #0481A2;
+    transition: width 1s ease-in-out;
+	width: 0;
+}
+
+.underline.active_under::after {
+    width: 60%;
+}
+
+.example_wrap {
+    margin: 20px 70px ;
+    padding-bottom: 50px;
+    gap: 50px;
+    position: fixed;
+    top: 10%;
+    height: 80vh;
+    overflow: auto;
+}
+
+.example_contents_wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.remove {
+    display: none;
+}
+
+.example {
+    padding: 20px;
+}
+
+
+.example-subtitle{
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration:underline;
+}
+
+.example-subtitle-2{
+    font-size: 20px;
+    padding-top: 3px;
+}
+
+.example_pic {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.example_pic_di {
+    width: 90%;
+}
+
+
+/* ゆっくり現れる仕様 */
+.fadein {
+    opacity : 0;
+    transform : translate(0, 70px);
+    transition : all 1s;
+}
+
+.fi_active{
+    opacity : 1;
+    transform : translate(0, 0); 
+}
+
+/* Continueボタン */
+.continue-btn {
+	width: 200px;
+	padding: 14px 100px;
+	margin: 50px auto;
+    background-color: gray;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+	text-align: center;
+	border: none;
+	/* display: flex;
+	justify-content: center; */
+}
+
+.continue-btn:hover{
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+}
+
+.continue-btn a{
+	text-decoration:none;
+	color:#fff
+}
+
+.continue-btn a:visited{
+    color: #fff;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G'sアカ森_Linuxコマンド</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style-linuxcommand.css" />
+    <link
+			href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="splash">
+        <div class="splash-logo">Loading...</div>
+      </div>
+      <!---画面遷移用-->
+			<div class="splashbg"></div>
+
+      <div id="container">
+        <header class="header">
+					<ul class="navi">
+            <li class="navititle"><a href="index.html">TOP</a></li>
+            <li class="navititle"><a href="JQuery_syntax.html">よくある構文をみる</a></li>
+						<li class="navititle"><a href="example_error.html">よくあるエラーをみる</a></li>
+            <li class="navititle"><a href="index.html#Area2">Our Service</a></li>
+            <li class="navititle"><a href="index.html#Area3">About Us</a></li>
+          </ul>
+        </header>
+
+
+				<div class="subtitle"><p>Linuxコマンド</p></div>
+
+				<div class="linux-wrapper">
+					<div class="linux_search">
+						<form>
+							<input type="search" id="l-search" placeholder="キーワードを入力">
+							<input type="submit" value="検索">
+						</form>
+					</div>
+	
+
+
+					<div class="linux_wrap">
+							<table bordercolor="#FFFFFF" class="table-linux">
+								<tr>
+									<th width="150" height="50">分類</th>
+									<th width="100" height="50">コマンド</th>
+									<th width="450">操作の説明</th>
+									<th colspan="2" width="300">コマンド記載例</th>
+								</tr>
+								<tr>
+									<td rowspan="4" height="50" class="type">"ディレクトリ"<br>移動・表示</td>
+									<td height="50" class="command">cd</td>
+									<td class="mean">指定したディレクトリ(フォルダ階層)へ移動</td>
+									<td class="example">cd ubuntu<br>cd public_html</td>
+									<td class="example">→ubuntuフォルダへ移動<br>→public_htmlフォルダへ移動</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">cd ../</td>
+									<td class="mean">1階層上のディレクトリ(フォルダ階層)へ移動</td>
+									<td class="example">cd ../<br>cd ../../</td>
+									<td class="example">→1階層上へ移動<br>→2階層上へ移動</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">ls</td>
+									<td class="mean">今作業しているディレクトリ(フォルダ階層)のフォルダ/ファイル一覧を表示</td>
+									<td class="example">ls</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">pwd</td>
+									<td class="mean">現在アクセスしているディレクトリ(フォルダ階層)がどこなのかを表示</td>
+									<td class="example">pwd</td>
+								</tr>
+								<tr>
+									<td rowspan="4" height="50" class="type">"ファイル"<br>コピー・削除・<br>移動・表示</td>
+									<td height="50" class="command">cp</td>
+									<td class="mean">対象のファイルをコピー</td>
+									<td class="example">cp コピー元ファイル名 コピー先ファイル名<br>cp test01.html test02.html</td>
+									<td class="example"><br>→「test01」というファイルをコピーし「test02」で保存</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">rm</td>
+									<td class="mean">対象のファイルを削除</td>
+									<td class="example">rm text01</td>
+									<td class="example">→「test01」というファイルを削除</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">mv</td>
+									<td class="mean">ファイルを移動</td>
+									<td class="example">mv 移動元ファイル名 移動先フォルダ名/移動先ファイル名<br>
+										mv test01.html public_html/test01.html<br>
+										mv test01.html public_html/test09.html</td>
+										<td class="example"><br>→「test01」ファイルpublic_htmlへ移動<br>→「test01」ファイルpublic_htmlへ「text09」に名前を変更し移動</td>
+									</tr>
+								<tr>
+									<td height="50" class="command">cat</td>
+									<td class="mean">テキストファイルの内容を表示</td>
+									<td class="example">cat test01.html</td>
+									<td class="example">→「test01」というファイルの内容を表示</td>
+								</tr>
+								<tr>
+									<td rowspan="2" height="50" class="type">"フォルダ"<br>作成・削除</td>
+									<td height="50" class="command">mkdir</td>
+									<td class="mean">新しいフォルダを作成</td>
+									<td class="example">mkdir test</td>
+									<td class="example">→「test」というフォルダを新規</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">rmdir</td>
+									<td class="mean">フォルダを削除</td>
+									<td class="example">rmdir test</td>
+									<td class="example">→「test」というフォルダを削除</td>
+								</tr>
+								<tr>
+									<td rowspan="7" height="50" class="type">"テキスト編集"<br>起動・編集・保存</td>
+									<td height="50" class="command">vi</td>
+									<td class="mean">テキストファイルの編集</td>
+									<td class="example">vi test.html</td>
+									<td class="example">→「test」というファイルを編集</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">[i]</td>
+									<td class="mean">（viのオプション）INSERTモード、書き込みが可能</td>
+									<td class="example">vi test.html → i</td>
+									<td class="example">ファイルを編集モードへ</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">[Escキー]</td>
+									<td class="mean">（viのオプション）INSERTモードを終了し、書き込み不可へ</td>
+									<td class="example">vi test.html → Escキー</td>
+									<td class="example">ファイルの編集モードを終了</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">[:]</td>
+									<td class="mean">（viのオプション）コマンドモードへ切り替え</td>
+									<td class="example">vi test.html → ：キー</td>
+									<td class="example">コマンドモードへ切り替え</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">[:wq]</td>
+									<td class="mean">（viのオプション）保存して終了へ</td>
+									<td class="example">vi test.html → :wq</td>
+									<td class="example">ファイルの編集を保存して終了</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">[:q]</td>
+									<td class="mean">（viのオプション）終了</td>
+									<td class="example">vi test.html → :q</td>
+									<td class="example">ファイルの編集を保存せず終了</td>
+								</tr>
+								<tr>
+									<td height="50" class="command">[:q!]</td>
+									<td class="mean">（viのオプション）強制的に終了</td>
+									<td class="example">vi test.html → :q!</td>
+									<td class="example">viエディタを強制的に終了</td>
+								</tr>
+
+							</table>
+				</div>
+
+
+			</div><!-- コンテナーの閉じタグ -->
+
+				<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+				<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
+				<script src="js/main.js"></script>
+
+</body>
+</html>

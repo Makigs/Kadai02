@@ -1,0 +1,478 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* max-width: 1500px; 最大幅 */
+    min-width: 1200px; /* 最小幅 */
+    max-height: 600px; /* 最大幅 */
+    min-height: 400px; /* 最小幅 */
+    font-family: "Noto Sans JP";
+    margin: auto;
+}
+
+.header {
+    position: absolute;
+    top: 0; /* 上部から配置の基準位置を決める */
+    left: 0; /* 左から配置の基準位置を決める */
+    width: 100%; /* ヘッダーの横幅を指定する */
+    height: 35px; /* ヘッダーの高さを指定する */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+
+.navi{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navititle{
+    padding: 50px 25px;
+    font-size: 15px;
+}
+
+.navititle a{
+    color: white;
+    text-decoration: none;
+    font-family: "Noto Sans JP";
+}
+
+/* ここからメイン写真 */
+.mainpic {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    animation: img_anime 16s ease infinite;
+}
+
+
+@keyframes img_anime {
+    0% {
+    background-image: url(../img/top_1.jpg); /* 背景画像1を指定 */
+    opacity: 0.85;
+    }
+    20% {
+    background-image: url(../img/top_1.jpg); /* 背景画像1を指定 */
+    opacity: 0.85;
+    }
+    35% {
+    background-image: url(../img/top_2.jpg); /* 背景画像2を指定 */
+    opacity: 0.8;
+    }
+    53% {
+    background-image: url(../img/top_2.jpg); /* 背景画像2を指定 */
+    opacity: 0.8;
+    }
+    68% {
+    background-image: url(../img/top_3.jpg); /* 背景画像3を指定 */
+    opacity: 0.8;
+    }
+    85% {
+    background-image: url(../img/top_3.jpg); /* 背景画像3を指定 */
+    opacity: 0.8;
+    }
+    100% {
+    background-image: url(../img/top_1.jpg); /* 背景画像1を指定 */
+    opacity: 0.85;
+    }
+} 
+
+/* ハンバーガーメニュー */
+.openbtn{
+	position: fixed;
+    top: 15px;
+    right: 15px;
+	background:#c7bebe;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+    z-index: 10;
+}
+
+.btn_remove{
+    display: none;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+}
+
+.openbtn span:nth-of-type(1),
+.openbtn span:nth-of-type(3) {
+    height: 2px;
+	background: #fff;
+    width: 62%;
+    left: 10px;
+}
+
+.openbtn span:nth-of-type(1) {
+	top:13px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:20px;
+	left:11px;
+	font-size:0.6rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:36px;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu表記をしている2つ目の要素が透過して消える*/
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 29.5px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/* メニューバー */
+.menu_remove{
+    display: none;
+}
+
+
+.menuwrap{
+    position:fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    background-color: rgb(160, 157, 157);
+    opacity: 0.7;
+    z-index: 9;
+}
+
+.menubar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.menu{
+    padding: 40px 0;
+    text-decoration: none;
+
+}
+
+.menu a{
+    font-family: "Noto Sans JP";
+    color: #fafafa;
+}
+
+
+/* メインメッセージ */
+.main_message{
+    font-family: 'Cormorant', serif;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    font-size: 90px;
+}
+.main_message_2{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.breath-start{
+    position: absolute;
+    top: 70%;
+    left: 23%;
+}
+
+.breath-start-button{
+    background-color: white;
+    /* color: white; */
+    font-size: 20px;
+    width: 300%;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+    border-radius: 2px;
+    /* padding: 10px; */
+    cursor: pointer;
+}
+
+#btn-hover:hover{
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+}
+
+/*== ボタン共通設定 */
+.btn_anime{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+	overflow: hidden;
+    /*ボタンの形状*/
+	text-decoration: none;
+	display: inline-block;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+.btn_anime {
+	position: relative;
+	color:#333;
+}
+
+.btn_anime span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn_anime:hover span{
+	color: #fff;
+}
+
+/*== 背景が流れる（斜め） */
+.bg_anime::before {
+	content: '';
+    /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: -130%;
+    /*色や形状*/
+	background:#333;
+	width:120%;
+	height: 100%;
+	transform: skewX(-25deg);
+}
+
+/*hoverした時のアニメーション*/
+.bg_anime:hover::before {
+	animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+
+}
+
+@keyframes skewanime {
+	100% {
+		left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+	}
+}
+
+
+
+
+/* ここからstart */
+
+.start-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-button-modal {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fafafa;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+.deep_breath{
+    padding: 20px;
+    width: 70%;
+    height: auto;
+}
+
+.fa {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.fa-times {
+    position: absolute;
+    right: 5%;
+    color:gray;
+    cursor: pointer;
+}
+
+.start-btn {
+    display: inline-block;
+    padding: 14px 140px;
+    background-color: gray;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+.start-btn a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#start-modal{
+    display: none;
+}
+
+
+/* ここからService */
+#box2{
+    background-image: url(../img/background_box2.png);
+    background-size: 90% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+
+.top-margin{
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.subtitle p{
+    font-family: 'Cormorant', serif;
+    text-align: center;
+    font-size: 50px;
+    margin: 70px 0 30px 0;
+}
+
+.service_wrap_box2 {
+    margin: 0 50px ;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.service_content{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.service_img {
+    width: 90%;
+    max-width: 400px;
+    min-width: 250px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.service_img:hover{
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.service_img_content {
+    position: relative;
+    z-index: 1;
+}
+
+.service_content_text{
+    width: 90%;
+    max-width: 400px;
+    min-width: 250px;
+    color: gray;
+    margin-bottom: 70px;
+}
+
+
+/* ここからAbout Us */
+#box3{
+    background-image: url(../img/background_box3.png);
+    background-size: 90% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service_wrap_box3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.table-access{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-30%);
+}
+
+/* Footer */
+.footer_wrap{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.footer{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+
+small{
+    font-size: 10px;
+}
+
+/* PageTOP */
+#page-top{
+    position:fixed;
+    right: 25px;
+    bottom: 25px;
+}
+
+
+
+

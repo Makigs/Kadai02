@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G'sアカ森_よくあるJQuery構文</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style-yokuaru.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+JP"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--/splash-->
+    <div class="splash">
+      <div class="splash-logo">Loading...</div>
+    </div>
+    <div class="splashbg"></div>
+    <!---画面遷移用-->
+    <div id="container">
+      <header class="header">
+        <ul class="navi">
+          <li class="navititle"><a href="index.html">TOP</a></li>
+          <li class="navititle"><a href="example_error.html">よくあるエラーをみる</a></li>
+          <li class="navititle"><a href="linux_command.html">Linuxコマンド</a></li>
+          <li class="navititle"><a href="index.html#Area2">Our Service</a></li>
+          <li class="navititle"><a href="index.html#Area3">About Us</a></li>
+        </ul>
+      </header>
+
+      <!-- 選択画面 -->
+      <div class="example-modal-wrapper">
+        <div class="example-button-modal">
+          <div class="close-modal">
+            <i class="fa-2 fa-times">×</i>
+          </div>
+          <div id="start-form">
+            <h2>利用しているJQueryメソッドを選択してください</h2>
+            <div class="example_choice">
+              <ul>
+                <li>
+                  <label for="cb0">
+                  <input type="checkbox" class="chk" name="example_input" value="ex0" id="cb0"/>
+                  JQueryの基本</label>
+                </li>
+                <li>
+                  <label for="cb1">
+                  <input type="checkbox" class="chk" name="example_input" value="ex1" id="cb1"/>
+                  cssメソッド</label>
+                </li>
+                <li>
+                  <label for="cb2">
+                  <input type="checkbox" class="chk" name="example_input" value="ex2" id="cb2"/>
+                  textメソッドとhtmlメソッド</label>
+                </li>
+                <li>
+                  <label for="cb3">
+                  <input type="checkbox" class="chk" name="example_input" value="ex3" id="cb3"/>
+                  addClassメソッド</label>
+                </li>
+                <li>
+                  <label for="cb4">
+                  <input type="checkbox" class="chk" name="example_input" value="ex4" id="cb4"/>
+                  removeClassメソッド</label>
+                </li>
+                <li>
+                  <label for="cb5">
+                  <input type="checkbox" class="chk" name="example_input" value="ex5" id="cb5"/>
+                  findメソッド</label>
+                </li>
+                <li>
+                  <label for="cb6">
+                  <input type="checkbox" class="chk" name="example_input" value="ex6" id="cb6"/>
+                  childrenメソッド</label>
+                </li>
+                <li>
+                  <label for="cb7">
+                  <input type="checkbox" class="chk" name="example_input" value="ex7" id="cb7"/>
+                  eqメソッド</label>
+                </li>
+                <li>
+                  <label for="cb8">
+                  <input type="checkbox" class="chk" name="example_input" value="ex8" id="cb8"/>
+                  indexメソッド</label>
+                </li>
+                <li>
+                  <label for="cb9">
+                  <input type="checkbox" class="chk" name="example_input" value="ex9" id="cb9"/>
+                  this</label>
+                </li>
+                <li>
+                  <label for="cb10">
+                  <input type="checkbox" class="chk" name="example_input" value="ex10" id="cb10"/>
+                  clickイベント</label>
+                </li>
+                <li>
+                  <label for="cb11">
+                  <input type="checkbox" class="chk" name="example_input" value="ex11" id="cb11"/>
+                  hoverイベント</label>
+                </li>
+              </ul>
+            </div>
+            <input
+              type="submit"
+              class="btn_mark example-btn"
+              value="JQuery構文をみる"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 例文 -->
+      <div class="example_wrap">  
+      <div class="example_explanation underline remove">
+        プログラミングの躓きで一番多いのはコードのタイプミスです。<br>
+        スクロールして基本の構文と自分のコードを見比べてみましょう
+      </div>
+      <div class="example_contents_wrap">
+        <div class="example remove fadein ex0">
+          <div class="example-subtitle">JQueryの基本</div>
+          <div class="example_pic">
+            <img src="./img/syntax_00.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex1">
+          <div class="example-subtitle">cssメソッド</div>
+          <div class="example-subtitle-2">HTML/CSSの書き換え</div>
+          <div class="example_pic">
+            <img src="./img/syntax_01.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex2">
+          <div class="example-subtitle">textメソッドとhtmlメソッド</div>
+          <div class="example-subtitle-2">HTML/CSSの書き換え</div>
+          <div class="example_pic">
+            <img src="./img/syntax_02.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex3">
+          <div class="example-subtitle">addClassメソッド</div>
+          <div class="example-subtitle-2">Classの追加/削除</div>
+          <div class="example_pic">
+            <img src="./img/syntax_03.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex4">
+          <div class="example-subtitle">removeClassメソッド</div>
+          <div class="example-subtitle-2">Classの追加/削除</div>
+          <div class="example_pic">
+            <img src="./img/syntax_04.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex5">
+          <div class="example-subtitle">findメソッド</div>
+          <div class="example-subtitle-2">子要素の取得</div>
+          <div class="example_pic">
+            <img src="./img/syntax_05.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex6">
+          <div class="example-subtitle">childrenメソッド</div>
+          <div class="example-subtitle-2">子要素の取得</div>
+          <div class="example_pic">
+            <img src="./img/syntax_06.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex7">
+          <div class="example-subtitle">eqメソッド</div>
+          <div class="example-subtitle-2">index番号の指定/取得</div>
+          <div class="example_pic">
+            <img src="./img/syntax_07.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex8">
+          <div class="example-subtitle">indexメソッド</div>
+          <div class="example-subtitle-2">index番号の指定/取得</div>
+          <div class="example_pic">
+            <img src="./img/syntax_08.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex9">
+          <div class="example-subtitle">this</div>
+          <div class="example_pic">
+            <img src="./img/syntax_09.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex10">
+          <div class="example-subtitle">clickイベント</div>
+          <div class="example_pic">
+            <img src="./img/syntax_10.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+        <div class="example remove fadein ex11">
+          <div class="example-subtitle">hoverイベント</div>
+          <div class="example_pic">
+            <img src="./img/syntax_11.png" class="example_pic_di" alt="" />
+          </div>
+        </div>
+      </div>
+
+              <!-- 解決しない場合 -->
+              <div class="continue-btn remove">
+                <a href="example_error.html">よくあるエラーをみる</a>
+              </div>
+    </div>
+
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
